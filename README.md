@@ -8,10 +8,14 @@ this code will scrap the buses of a given city to city.
 4. afte compeleting the details page will back to homae page for next scaraping
 
 format and elements used to retrive data:
-elem_keys = { 'st_list': {"fmt": 'class name', "emt": 'rtcBack'},
+elem_keys = { 'st_list': {"fmt": 'class name', "emt": 'rtcBack'}
+
               'st_list_div': {"fmt": 'class name', "emt": 'rtcName'},
+            
               'st_div': {"fmt": 'xpath', "emt": '//*[@id="Carousel"]/div[<value>]'},
-              'route_page_div': {"fmt": 'class name', "emt": 'DC_117_paginationTable'},  
+              
+              'route_page_div': {"fmt": 'class name', "emt": 'DC_117_paginationTable'}, 
+              
               'route_page_no': {"fmt": 'tag name', "emt": 'div'},   
               'route_div': {"fmt": 'class name', "emt": 'route_link'},
               'route_link': {"fmt": 'tag name', "emt": 'a'},   
