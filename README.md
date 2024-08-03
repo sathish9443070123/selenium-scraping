@@ -32,14 +32,17 @@ elem_keys = { 'st_list': {"fmt": 'class name', "emt": 'rtcBack'}
 flow of scraping
 
 #--------------------------------------------------main function----------------------------------
-"""
+
+
         intially we load redbus.in home page in driver.get method. first we retrive states lited in home page. after navigating the state page we retrive
     route under the state. each page page contains 10 route details with name  and , number of buses, and minimum price , we retive name, link, number of buss.
     after user input we load the bus of route he/she selected and process the data.after competion of data collection page will automatically goes back to rout list page
     sleected state. User can collect another route buses or press - 0  to goto state(home page). Ether user can select next state and follow above procedures to collect
     the date, or press - 0  to exit the code.
-"""
+
+
 def find_elem_s(contents,find_details):
+
     try:
         ids = contents.find_elements(find_details["fmt"],
                                      find_details["emt"])
@@ -48,6 +51,7 @@ def find_elem_s(contents,find_details):
     return ids
 
 def find_elem_one(contents,find_details):
+
     try:
         ids = contents.find_element(find_details["fmt"],
                                      find_details["emt"])
@@ -56,6 +60,7 @@ def find_elem_one(contents,find_details):
     return ids
 
 def find_elem_one_replace(contents,find_details,rp_char):
+
     try:        
         ids = contents.find_element(find_details["fmt"], find_details["emt"].replace('<value>',rp_char))
     except:
@@ -63,6 +68,7 @@ def find_elem_one_replace(contents,find_details,rp_char):
     return ids
 
 def link_click(contents,elem_click,sleep_time):
+
     try:        
         action = ActionChains(contents)
         action.move_to_element(elem_click).click().perform() 
